@@ -1,0 +1,27 @@
+# Ing. Brandon Chitay
+# Universidad Da Vinci de Guatemala
+# Desarrollo multiplataforma primer semestre 2024
+
+# In order to use django in a virtual enviroment you need to install the following packages:
+# pip install pipenv
+
+# pipenv shell # this will create a virtual enviroment and install all the dependencies
+# run the following command to install all the dependencies.
+# pip install -r requirements.txt
+
+# run django-admin startproject NOMBRE . # this will create a new django project with the name NOMBRE in the current directory.
+# Its important that before running this command you are in the directory where you want to create the project,
+# by convention the name of the project is the name of the directory where the project is located.
+
+# In order to use the graph_models command, you need to install the following packages:
+# pip install pygraphviz
+# pip install pyparsing pydot
+
+# Comando para ejecutar el diagrama de clases
+# python manage.py graph_models Paciente -o Doctor_models.png
+asgiref==3.7.2
+Django==5.0.2
+django-extensions==3.2.3
+pydot==2.0.0
+pyparsing==3.1.1
+sqlparse==0.4.4
