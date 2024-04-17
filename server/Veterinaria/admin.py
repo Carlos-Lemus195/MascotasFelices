@@ -1,10 +1,9 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Propietario, FichaDesparacitacion, Mascota, AsignacionPropietarioMascota, Cita
+from .models import Duenos, Desparasitaciones, Mascotas, Citas
 
-admin.site.register(Propietario)
-admin.site.register(FichaDesparacitacion)
-admin.site.register(Mascota)
-admin.site.register(AsignacionPropietarioMascota)
-admin.site.register(Cita)
+admin.site.register(Duenos)
+admin.site.register(Desparasitaciones)
+admin.site.register(Mascotas)
+admin.site.register(Citas)

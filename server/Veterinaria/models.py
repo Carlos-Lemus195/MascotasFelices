@@ -1,40 +1,29 @@
 from django.db import models
 
 # Create your models here.
-class Propietario(models.Model):
-    codigo_propietario = models.AutoField(primary_key=True)
+class Duenos(models.Model):
+    codigo_dueno = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    telefono = models.CharField(max_length=8)
+    telefono = models.IntegerField(max_length=8)
     direccion = models.CharField(max_length=255)
     correo_electronico = models.EmailField()
-    
+    estado = models.CharField(max_length=10, choices=[('active', 'ACTIVE'), ('inactive', 'INACTIVE')], default='active')
     class Meta:
-       verbose_name_plural = "Propietarios"
+       verbose_name_plural = "Duenos"
 
     def __str__(self):
         return self.nombre
     
-class FichaDesparacitacion(models.Model):
-    codigo_ficha_desparacitacion = models.AutoField(primary_key=True)
-    fecha = models.DateField()
-    tipo = models.CharField(max_length=50)
-    nombre = models.CharField(max_length=50)
-    via_administracion = models.CharField(max_length=50)
-
-    class Meta:
-       verbose_name_plural = "Fichas de Desparacitacion"
-
-    def __str__(self):
-        return self.nombre
-    
-class Mascota(models.Model):
+class Mascotas(models.Model):
     codigo_mascota = models.AutoField(primary_key=True)
+    codigo_dueno = models.ForeignKey(Duenos, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=50)
     fecha_nacimiento = models.DateField()
     sexo = models.CharField(max_length=1)
     especie = models.CharField(max_length=50)
     raza = models.CharField(max_length=50)
+    estado = models.CharField(max_length=10, choices=[('active', 'ACTIVE'), ('inactive', 'INACTIVE')], default='active')
 
     class Meta:
        verbose_name_plural = "Mascotas"
@@ -42,22 +31,27 @@ class Mascota(models.Model):
     def __str__(self):
         return self.nombre
     
-class AsignacionPropietarioMascota(models.Model):
-    codigo_propietario = models.ForeignKey(Propietario, on_delete=models.CASCADE)
-    codigo_mascota = models.ForeignKey(Mascota, on_delete=models.CASCADE)
+class Desparasitaciones(models.Model):
+    codigo_ficha_desparacitacion = models.AutoField(primary_key=True)
+    fecha = models.DateField()
+    tipo = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50)
+    via_administracion = models.CharField(max_length=50)
+    estado = models.CharField(max_length=11, choices=[('completed', 'completado'), ('incompleted', 'no completado')], default='completed')
 
     class Meta:
-       verbose_name_plural = "Asignacion de Propietario y Mascota"
+       verbose_name_plural = "Fichas de Desparacitacion"
 
     def __str__(self):
-        return self.codigo_propietario
+        return self.nombre
     
-class Cita(models.Model):
+class Citas(models.Model):
     codigo_cita = models.AutoField(primary_key=True)
-    codigo_propietario = models.ForeignKey(Propietario, on_delete=models.CASCADE)
-    codigo_mascota = models.ForeignKey(Mascota, on_delete=models.CASCADE)
+    codigo_propietario = models.ForeignKey(Duenos, on_delete=models.CASCADE)
+    codigo_mascota = models.ForeignKey(Mascotas, on_delete=models.CASCADE)
     fechaHora = models.DateTimeField()
     razon_cita = models.CharField(max_length=255)
+    estado = models.CharField(max_length=10, choices=[('done', 'DONE'), ('canceled', 'CANCELED')], default='done')
 
     class Meta:
        verbose_name_plural = "Citas"
