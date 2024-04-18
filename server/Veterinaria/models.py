@@ -1,14 +1,15 @@
 from django.db import models
+from django.core.validators import RegexValidator
 
 # Create your models here.
 class Duenos(models.Model):
     codigo_dueno = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    telefono = models.IntegerField(max_length=8)
+    telefono = models.CharField(max_length=10, validators=[RegexValidator(r'^\d{1,10}$')])
     direccion = models.CharField(max_length=255)
     correo_electronico = models.EmailField()
-    estado = models.CharField(max_length=10, choices=[('active', 'ACTIVE'), ('inactive', 'INACTIVE')], default='active')
+    estado = models.CharField(max_length=10, choices=[('active', 'ACTIVE'), ('inactive', 'INACTIVE')])
     class Meta:
        verbose_name_plural = "Duenos"
 
@@ -32,7 +33,7 @@ class Mascotas(models.Model):
         return self.nombre
     
 class Desparasitaciones(models.Model):
-    codigo_ficha_desparacitacion = models.AutoField(primary_key=True)
+    codigo_desparacitacion = models.AutoField(primary_key=True)
     fecha = models.DateField()
     tipo = models.CharField(max_length=50)
     nombre = models.CharField(max_length=50)
