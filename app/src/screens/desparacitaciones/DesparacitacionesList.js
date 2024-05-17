@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { View, FlatList, StyleSheet } from 'react-native';
 import { Button, Text, Card } from '@rneui/themed';
-import { useFocusEffect, useRoute } from '@react-navigation/native';
+import { useFocusEffect } from '@react-navigation/native';
 import { ROUTES } from '../../helpers/routes';
 
 import { getDesparacitaciones } from '../../services/apiService';
@@ -12,7 +12,6 @@ import DesparacitacionFactory from '../../factories/DesparacitacionFactory';
 const DesparacitacionesList = ({navigation}) => {
   const [desparacitaciones, setDesparacitaciones] = useState([]);
   const [error, setError] = useState(null);
-  const route = useRoute();
 
   const retrieveDesparacitaciones = async () => {
     const response = await getDesparacitaciones();

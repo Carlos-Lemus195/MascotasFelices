@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { View, FlatList, StyleSheet } from 'react-native';
 import { Button, Text, Card } from '@rneui/themed';
-import { useFocusEffect, useRoute } from '@react-navigation/native';
+import { useFocusEffect } from '@react-navigation/native';
 import { ROUTES } from '../../helpers/routes';
 
 import { getCitas } from '../../services/apiService';
@@ -12,7 +12,6 @@ import CitaFactory from '../../factories/CitaFactory';
 const CitasList = ({navigation}) => {
   const [citas, setCitas] = useState([]);
   const [error, setError] = useState(null);
-  const route = useRoute();
 
   const retrieveCitas = async () => {
     const response = await getCitas();
@@ -101,7 +100,11 @@ const renderCitaItem = ({item}) => {
         <Text>Error: {error}</Text>
       ) : (
         <FlatList
-          data={citas.sort((a, b) => a.estado.localeCompare(b.estado))}
+          data={citas.sort((a, b) => {
+            if (a.estado === 'pending' && b.estado !== 'pending') return -1;
+            if (a.estado !== 'pending' && b.estado === 'pending') return 1;
+            return new Date(a.fechaHora) - new Date(b.fechaHora);
+          })}
           renderItem={renderCitaItem}
           keyExtractor={item => item.codigo_cita.toString()}
         />

@@ -1,9 +1,9 @@
 // App.js
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
 import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
+import {getFocusedRouteNameFromRoute, NavigationContainer} from '@react-navigation/native';
 import { Button, Text, Card } from '@rneui/themed';
 import {ROUTES} from './src/helpers/routes';
 import HomeScreen from './src/screens/HomeScreen';
@@ -178,15 +178,39 @@ function shouldRenderDrawerParent(route) {
 
 function CustomDrawerContent(props) {
   return (
-    <DrawerContentScrollView {...props}>
+    <DrawerContentScrollView {...props} style={styles.container}>
       <DrawerItemList {...props} />
-      <Text>Carlos Lemus</Text>
-      <Text>Technologies used in this project:</Text>
-      <Text>React Native, Axios, JavaScript.</Text>
-      <Text>GitHub: https://github.com/Carlos-Lemus195/MascotasFelices</Text>
+      <Text style={styles.name}>Carlos Lemus</Text>
+      <Text style={styles.title}>Technologies used in this project:</Text>
+      <Text style={styles.description}>React Native, Axios, JavaScript</Text>
+      <Text style={styles.link}>GitHub: https://github.com/Carlos-Lemus195/MascotasFelices</Text>
     </DrawerContentScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 15,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  title: {
+    fontSize: 16,
+    marginTop: 10,
+  },
+  description: {
+    fontSize: 14,
+    marginLeft: 10,
+  },
+  link: {
+    fontSize: 14,
+    color: 'blue',
+    marginTop: 10,
+  },
+});
 
 function App() {
   return (
