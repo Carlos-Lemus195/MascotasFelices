@@ -188,7 +188,7 @@ inline tools::promote_args_t<Real> chebyshev_t_prime(unsigned n, Real const & x)
  * Gil, Amparo, Javier Segura, and Nico M. Temme.
  * Numerical methods for special functions.
  * Society for Industrial and Applied Mathematics, 2007.
- * https://www.siam.org/books/ot99/OT99SampleChapter.pdf
+ * https://www.siam.org/duenos/ot99/OT99SampleChapter.pdf
  * However, our definition of c0 differs by a factor of 1/2, as stated in the docs. . .
  */
 template <class Real, class T2>

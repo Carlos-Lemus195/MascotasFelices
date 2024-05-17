@@ -1226,7 +1226,7 @@ cpp_dec_float<Digits10, ExponentType, Allocator>& cpp_dec_float<Digits10, Expone
    // limited to the minimum required in order to minimize
    // the run-time.
    //
-   // Book references:
+   // Dueno references:
    // https://doi.org/10.1007/978-3-642-56735-3
    // http://www.amazon.com/exec/obidos/tg/detail/-/3540665722/qid=1035535482/sr=8-7/ref=sr_8_7/104-3357872-6059916?v=glance&n=507846
 

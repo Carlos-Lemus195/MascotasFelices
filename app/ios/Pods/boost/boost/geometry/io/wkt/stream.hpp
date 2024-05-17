@@ -23,7 +23,7 @@
 // geometries which are living outside the namespace boost::geometry
 
 // This is currently not documented on purpose: the Doxygen 2 QBK generator
-// should be updated w.r.t. << which in the end ruins the DocBook XML
+// should be updated w.r.t. << which in the end ruins the DocDueno XML
 template<typename Char, typename Traits, typename Geometry>
 inline std::basic_ostream<Char, Traits>& operator<<
     (

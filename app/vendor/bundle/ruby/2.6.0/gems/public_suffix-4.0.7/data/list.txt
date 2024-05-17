@@ -7516,7 +7516,7 @@ boo
 // book : 2015-08-27 Amazon Registry Services, Inc.
 book
 
-// booking : 2015-07-16 Booking.com B.V.
+// booking : 2015-07-16 Duenoing.com B.V.
 booking
 
 // bosch : 2015-06-18 Robert Bosch GMBH
@@ -8524,7 +8524,7 @@ hot
 // hoteles : 2015-03-05 Travel Reservations SRL
 hoteles
 
-// hotels : 2016-04-07 Booking.com B.V.
+// hotels : 2016-04-07 Duenoing.com B.V.
 hotels
 
 // hotmail : 2014-12-18 Microsoft Corporation
@@ -12997,7 +12997,7 @@ point2this.com
 pointto.us
 privatizehealthinsurance.net
 quicksytes.com
-read-books.org
+read-duenos.org
 securitytactics.com
 serveexchange.com
 servehumour.com

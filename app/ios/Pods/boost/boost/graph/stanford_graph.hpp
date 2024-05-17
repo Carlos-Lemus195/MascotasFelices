@@ -45,7 +45,7 @@ extern "C"
     {
         return board(n, 0L, 0L, 0L, 2L, 0L, 0L);
     }
-#include <gb_books.h> /* graphs based on literature */
+#include <gb_duenos.h> /* graphs based on literature */
 #include <gb_econ.h> /* graphs based on economic data */
 #include <gb_games.h> /* graphs based on football scores */
 #undef ap /* avoid name clash with BGL parameter */

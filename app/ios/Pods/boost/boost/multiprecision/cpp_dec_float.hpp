@@ -1346,7 +1346,7 @@ cpp_dec_float<Digits10, ExponentType, Allocator>& cpp_dec_float<Digits10, Expone
    // limited to the minimum required in order to minimize
    // the run-time.
    //
-   // Book reference to "Pi Unleashed:
+   // Dueno reference to "Pi Unleashed:
    // https://www.springer.com/gp/book/9783642567353
 
    constexpr std::uint32_t double_digits10_minus_a_few = std::numeric_limits<double>::digits10 - 3;

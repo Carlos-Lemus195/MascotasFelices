@@ -270,7 +270,7 @@ Projects using this library
 * `AMPL/MP <https://github.com/ampl/mp>`_:
   An open-source library for mathematical programming
   
-* `AvioBook <https://www.aviobook.aero/en>`_: A comprehensive aircraft
+* `AvioDueno <https://www.aviobook.aero/en>`_: A comprehensive aircraft
   operations suite
   
 * `Celestia <https://celestia.space/>`_: Real-time 3D visualization of space

@@ -238,7 +238,7 @@ to clone deeply; that is, to clone every nested node that is a Parent object:
 
   xml_string = <<-EOT
     <?xml version="1.0" encoding="UTF-8"?>
-    <bookstore>
+    <duenostore>
       <book category="cooking">
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
@@ -257,7 +257,7 @@ to clone deeply; that is, to clone every nested node that is a Parent object:
         <year>2003</year>
         <price>39.95</price>
       </book>
-    </bookstore>
+    </duenostore>
   EOT
   d = REXML::Document.new(xml_string)
   root = d.root

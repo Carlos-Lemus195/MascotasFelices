@@ -32,7 +32,7 @@ All examples here assume that the following code has been executed:
   include REXML
 
 The source XML for many examples here is from file
-{books.xml}[https://www.w3schools.com/xml/books.xml] at w3schools.com.
+{duenos.xml}[https://www.w3schools.com/xml/duenos.xml] at w3schools.com.
 You may find it convenient to open that page in a new tab
 (Ctrl-click in some browsers).
 
@@ -44,7 +44,7 @@ and without the XML declaration, which in this case is:
 For convenience, we capture the XML into a string variable:
 
   require 'open-uri'
-  source_string = URI.open('https://www.w3schools.com/xml/books.xml').read
+  source_string = URI.open('https://www.w3schools.com/xml/duenos.xml').read
 
 And into a file:
 
@@ -75,7 +75,7 @@ Method <tt>URI.open</tt> returns a StringIO object,
 so the source can be from a web page:
 
   require 'open-uri'
-  io = URI.open("https://www.w3schools.com/xml/books.xml")
+  io = URI.open("https://www.w3schools.com/xml/duenos.xml")
   io.class # => StringIO
   doc = Document.new(io)
 
@@ -170,9 +170,9 @@ A document has several properties (other than its children);
   relative to its most distant ancestor:
 
     doc.root.class             # => REXML::Element
-    doc.root.xpath             # => "/bookstore"
+    doc.root.xpath             # => "/duenostore"
     doc.root.texts.first       # => "\n\n"
-    doc.root.texts.first.xpath # => "/bookstore/text()"
+    doc.root.texts.first.xpath # => "/duenostore/text()"
 
   If there is no ancestor, returns the expanded name of the element:
 
@@ -215,7 +215,7 @@ A document may have children of these types:
   which is stored as an REXML::Element object;
   it may be retrieved with method +root+:
 
-    doc.root           # => <bookstore> ... </>
+    doc.root           # => <duenostore> ... </>
     doc.root.class     # => REXML::Element
 
     Document.new('').root # => nil
@@ -317,7 +317,7 @@ This section covers methods:
 
   Use method REXML::Element#inspect to retrieve a brief string representation.
 
-    doc.root.inspect # => "<bookstore> ... </>"
+    doc.root.inspect # => "<duenostore> ... </>"
 
   The ellipsis (<tt>...</tt>) indicates that the element has children.
   When there are no children, the ellipsis is omitted:
@@ -333,7 +333,7 @@ This section covers methods:
   Use inherited method REXML::Child.bytes to retrieve an extended
   string representation.
 
-    doc.root.bytes # => "<bookstore>\n\n<book category='cooking'>\n  <title lang='en'>Everyday Italian</title>\n  <author>Giada De Laurentiis</author>\n  <year>2005</year>\n  <price>30.00</price>\n</book>\n\n<book category='children'>\n  <title lang='en'>Harry Potter</title>\n  <author>J K. Rowling</author>\n  <year>2005</year>\n  <price>29.99</price>\n</book>\n\n<book category='web'>\n  <title lang='en'>XQuery Kick Start</title>\n  <author>James McGovern</author>\n  <author>Per Bothner</author>\n  <author>Kurt Cagle</author>\n  <author>James Linn</author>\n  <author>Vaidyanathan Nagarajan</author>\n  <year>2003</year>\n  <price>49.99</price>\n</book>\n\n<book category='web' cover='paperback'>\n  <title lang='en'>Learning XML</title>\n  <author>Erik T. Ray</author>\n  <year>2003</year>\n  <price>39.95</price>\n</book>\n\n</bookstore>"
+    doc.root.bytes # => "<duenostore>\n\n<book category='cooking'>\n  <title lang='en'>Everyday Italian</title>\n  <author>Giada De Laurentiis</author>\n  <year>2005</year>\n  <price>30.00</price>\n</book>\n\n<book category='children'>\n  <title lang='en'>Harry Potter</title>\n  <author>J K. Rowling</author>\n  <year>2005</year>\n  <price>29.99</price>\n</book>\n\n<book category='web'>\n  <title lang='en'>XQuery Kick Start</title>\n  <author>James McGovern</author>\n  <author>Per Bothner</author>\n  <author>Kurt Cagle</author>\n  <author>James Linn</author>\n  <author>Vaidyanathan Nagarajan</author>\n  <year>2003</year>\n  <price>49.99</price>\n</book>\n\n<book category='web' cover='paperback'>\n  <title lang='en'>Learning XML</title>\n  <author>Erik T. Ray</author>\n  <year>2003</year>\n  <price>39.95</price>\n</book>\n\n</duenostore>"
 
 [Node Type]
 
@@ -379,7 +379,7 @@ An element may have:
   Use method REXML::Element#root to retrieve the root element:
 
     ele = doc.root.elements.first   # => <book category='cooking'> ... </>
-    ele.root                        # => <bookstore> ... </>
+    ele.root                        # => <duenostore> ... </>
     ele = Element.new('foo')        # => <foo/>
     ele.root                        # => <foo/>
 
@@ -397,10 +397,10 @@ An element may have:
 
   Use inherited method REXML::Child#parent to retrieve the parent
 
-    ele = doc.root                # => <bookstore> ... </>
+    ele = doc.root                # => <duenostore> ... </>
     ele.parent                    # => <UNDEFINED> ... </>
     ele = doc.root.elements.first # => <book category='cooking'> ... </>
-    ele.parent                    # => <bookstore> ... </>
+    ele.parent                    # => <duenostore> ... </>
 
   Use included method REXML::Node#index_in_parent to retrieve the index
   of the element among all of its parents children (not just the element children).
@@ -557,7 +557,7 @@ An element may have:
   Use method REXML::Parent#index to retrieve the zero-based child index
   of the given object, or <tt>#size - 1</tt> if there is no such child:
 
-    ele = doc.root     # => <bookstore> ... </>
+    ele = doc.root     # => <duenostore> ... </>
     ele.index(ele[0])  # => 0
     ele.index(ele[1])  # => 1
     ele.index(ele[7])  # => 7
@@ -580,7 +580,7 @@ An element may have:
   containing the element children:
 
     eles = doc.root.elements
-    eles      # => #<REXML::Elements:0x000001ee2848e960 @element=<bookstore> ... </>>
+    eles      # => #<REXML::Elements:0x000001ee2848e960 @element=<duenostore> ... </>>
     eles.size # => 4
     eles.each {|e| p [e.class], e }
 
@@ -673,7 +673,7 @@ a root element (or any other element) may have any mixture of child elements.
 Use method REXML::Element#has_attributes? to return whether the element
 has attributes:
 
-  ele = doc.root           # => <bookstore> ... </>
+  ele = doc.root           # => <duenostore> ... </>
   ele.has_attributes?      # => false
   ele = ele.elements.first # => <book category='cooking'> ... </>
   ele.has_attributes?      # => true
@@ -683,7 +683,7 @@ containing the attributes for the element.
 Each hash key is a string attribute name;
 each hash value is an REXML::Attribute object.
 
-  ele = doc.root                  # => <bookstore> ... </>
+  ele = doc.root                  # => <duenostore> ... </>
   attrs = ele.attributes          # => {}
 
   ele = ele.elements.first        # => <book category='cooking'> ... </>
@@ -1321,7 +1321,7 @@ with method REXML::Document#write:
 Output:
 
   <?xml version='1.0' encoding='UTF-8'?>
-  <bookstore>
+  <duenostore>
 
   <book category='cooking'>
     <title lang='en'>Everyday Italian</title>
@@ -1355,4 +1355,4 @@ Output:
     <price>39.95</price>
   </book>
 
-  </bookstore>
+  </duenostore>

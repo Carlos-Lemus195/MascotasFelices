@@ -1,58 +1,100 @@
 // DuenosList.js
 
-import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  TouchableOpacity,
-  Button,
-} from 'react-native';
-import {getDuenos} from '../../services/apiService';
+import React, { useState } from 'react';
+import { View, FlatList, StyleSheet } from 'react-native';
+import { Button, Text, Card } from '@rneui/themed';
+import { useFocusEffect, useRoute } from '@react-navigation/native';
+import { ROUTES } from '../../helpers/routes';
+
+import { getDuenos } from '../../services/apiService';
 import DuenoFactory from '../../factories/DuenoFactory';
-import {useRoute} from '@react-navigation/native';
-import {ROUTES} from '../../helpers/routes';
 
 const DuenosList = ({navigation}) => {
   const [duenos, setDuenos] = useState([]);
   const [error, setError] = useState(null);
   const route = useRoute();
 
-  useEffect(() => {
-    const retrieveDuenos = async () => {
-      const response = await getDuenos();
-      const duenosData = response.data.map(data => DuenoFactory.createDueno(data));
-      setDuenos(duenosData);
-    };
-    retrieveDuenos();
-  }, []);
+  const retrieveDuenos = async () => {
+    const response = await getDuenos();
+    setDuenos(response.data.map(data => DuenoFactory.createDueno(data)));
+  };
+  
+  useFocusEffect(
+    React.useCallback(() => {
+      let isActive = true;
+  
+      const retrieve = async () => {
+        if (isActive) {
+          await retrieveDuenos();
+        }
+      };
+  
+      retrieve();
+  
+      const intervalId = setInterval(() => {
+        retrieve();
+      }, 5000);
+  
+      return () => {
+        isActive = false;
+        clearInterval(intervalId);
+      };
+    }, [])
+  );
 
   const renderDuenoItem = ({item}) => (
     <View style={styles.itemContainer}>
-      <Text>Title: {item.title}</Text>
-      <Text>Author: {item.author}</Text>
-      <Text>Price: ${item.price}</Text>
-      <Text>Status: {item.status ? 'Available' : 'Unavailable'}</Text>
-      <Text>{item.toString()}</Text>
-      <Text>{item.getSummary()}</Text>
+      <Card containerStyle={{ marginTop: 10, marginBottom: 10}}>
+        <Text>{item.getSummary()}</Text>
+        <Text>Estado: <Text style={{ color: item.estado === 'active' ? 'green' : 'red' }}>{item.estado}</Text></Text>
+        <Button 
+          title="Informacion"
+          onPress={() => navigation.navigate(ROUTES.DUENOS.STACK.DUENO_DETAILS, item)} 
+          size="sm" type="clear"
+          icon={{
+            name: 'user',
+            type: 'font-awesome',
+            size: 15,
+            color: '#4d7abf',
+          }}/>
+      </Card>
     </View>
   );
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.addButton}
-        onPress={() => navigation.navigate(ROUTES.BOOKS.STACK.NEW_BOOK)}>
-        <Text style={styles.addButtonLabel}>Add Dueno</Text>
-      </TouchableOpacity>
+      <Button
+        title="Agregar Nuevo Dueno"
+        onPress={() => navigation.navigate(ROUTES.DUENOS.STACK.NEW_DUENO)}
+        icon={{
+          name: 'user-plus',
+          type: 'font-awesome',
+          size: 15,
+          color: 'white',
+        }}
+        iconContainerStyle={{ marginRight: 10 }}
+        titleStyle={{ fontWeight: '700' }}
+        buttonStyle={{
+          backgroundColor: '#52cc37',
+          borderColor: 'transparent',
+          borderWidth: 0,
+          borderRadius: 30,
+        }}
+        containerStyle={{
+          width: 300,
+          marginHorizontal: 25,
+          marginBottom: 15,
+          marginTop: -6
+        }}
+      />
+
       {error ? (
         <Text>Error: {error}</Text>
       ) : (
         <FlatList
-          data={duenos}
+          data={duenos.sort((a, b) => a.estado.localeCompare(b.estado))}
           renderItem={renderDuenoItem}
-          keyExtractor={item => item.book_pk.toString()}
+          keyExtractor={item => item.codigo_dueno.toString()}
         />
       )}
     </View>
@@ -61,25 +103,14 @@ const DuenosList = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
   itemContainer: {
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-  },
-  addButton: {
-    backgroundColor: 'blue',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 5,
-  },
-  addButtonLabel: {
-    fontSize: 16,
-    color: '#fff',
-  },
+  }
 });
 
 export default DuenosList;

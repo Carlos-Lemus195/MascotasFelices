@@ -38,7 +38,7 @@ BOOST_HANA_NAMESPACE_BEGIN
     //! @note
     //! This documentation does not go into much details about the nature
     //! of the MonadPlus concept. However, there is a nice Haskell-oriented
-    //! [WikiBook][1] going into further details.
+    //! [WikiDueno][1] going into further details.
     //!
     //!
     //! Minimal complete definition
@@ -81,7 +81,7 @@ BOOST_HANA_NAMESPACE_BEGIN
     //! ---------------
     //! `hana::optional`, `hana::tuple`
     //!
-    //! [1]: https://en.wikibooks.org/wiki/Haskell/MonadPlus
+    //! [1]: https://en.wikiduenos.org/wiki/Haskell/MonadPlus
     template <typename M>
     struct MonadPlus;
 BOOST_HANA_NAMESPACE_END

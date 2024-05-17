@@ -3673,8 +3673,8 @@
 		46EB2E0001FBC0 /* RNCSafeAreaViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E0000E2A0 /* RNCSafeAreaViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		46EB2E0001FBD0 /* RNCSafeAreaViewMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E0000E2C0 /* RNCSafeAreaViewMode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		46EB2E0001FC30 /* react-native-safe-area-context-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001FC20 /* react-native-safe-area-context-dummy.m */; };
-		46EB2E0001FD40 /* Pods-AwesomeProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001FD30 /* Pods-AwesomeProject-dummy.m */; };
-		46EB2E0001FE50 /* Pods-AwesomeProject-AwesomeProjectTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001FE40 /* Pods-AwesomeProject-AwesomeProjectTests-dummy.m */; };
+		46EB2E0001FD40 /* Pods-MascotasFelicesProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001FD30 /* Pods-MascotasFelicesProject-dummy.m */; };
+		46EB2E0001FE50 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E0001FE40 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -10442,20 +10442,20 @@
 		46EB2E0001FC00 /* react-native-safe-area-context.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "react-native-safe-area-context.release.xcconfig"; sourceTree = "<group>"; };
 		46EB2E0001FC10 /* react-native-safe-area-context-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "react-native-safe-area-context-prefix.pch"; sourceTree = "<group>"; };
 		46EB2E0001FC20 /* react-native-safe-area-context-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "react-native-safe-area-context-dummy.m"; sourceTree = "<group>"; };
-		46EB2E0001FCD0 /* Pods-AwesomeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeProject.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E0001FCE0 /* Pods-AwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E0001FCF0 /* Pods-AwesomeProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AwesomeProject-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E0001FD00 /* Pods-AwesomeProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AwesomeProject-resources.sh"; sourceTree = "<group>"; };
-		46EB2E0001FD10 /* Pods-AwesomeProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AwesomeProject-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E0001FD20 /* Pods-AwesomeProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AwesomeProject-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E0001FD30 /* Pods-AwesomeProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AwesomeProject-dummy.m"; sourceTree = "<group>"; };
-		46EB2E0001FDE0 /* Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E0001FDF0 /* Pods-AwesomeProject-AwesomeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeProject-AwesomeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E0001FE00 /* Pods-AwesomeProject-AwesomeProjectTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AwesomeProject-AwesomeProjectTests-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E0001FE10 /* Pods-AwesomeProject-AwesomeProjectTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AwesomeProject-AwesomeProjectTests-resources.sh"; sourceTree = "<group>"; };
-		46EB2E0001FE20 /* Pods-AwesomeProject-AwesomeProjectTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AwesomeProject-AwesomeProjectTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E0001FE30 /* Pods-AwesomeProject-AwesomeProjectTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AwesomeProject-AwesomeProjectTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E0001FE40 /* Pods-AwesomeProject-AwesomeProjectTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AwesomeProject-AwesomeProjectTests-dummy.m"; sourceTree = "<group>"; };
+		46EB2E0001FCD0 /* Pods-MascotasFelicesProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MascotasFelicesProject.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E0001FCE0 /* Pods-MascotasFelicesProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MascotasFelicesProject.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E0001FCF0 /* Pods-MascotasFelicesProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MascotasFelicesProject-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E0001FD00 /* Pods-MascotasFelicesProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MascotasFelicesProject-resources.sh"; sourceTree = "<group>"; };
+		46EB2E0001FD10 /* Pods-MascotasFelicesProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MascotasFelicesProject-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E0001FD20 /* Pods-MascotasFelicesProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MascotasFelicesProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E0001FD30 /* Pods-MascotasFelicesProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MascotasFelicesProject-dummy.m"; sourceTree = "<group>"; };
+		46EB2E0001FDE0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E0001FDF0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E0001FE00 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E0001FE10 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests-resources.sh"; sourceTree = "<group>"; };
+		46EB2E0001FE20 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E0001FE30 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E0001FE40 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests-dummy.m"; sourceTree = "<group>"; };
 		50B5347C9A6E93B7D4CFC3673BA6FB7E /* RNScreens */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RNScreens; path = libRNScreens.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCF98CEFF94C742080B6965D537AD0 /* react-native-safe-area-context */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "react-native-safe-area-context"; path = "libreact-native-safe-area-context.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA54A19E2135E09B9C8C0767385FD3A /* React-graphics */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-graphics"; path = "libReact-graphics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -10477,7 +10477,7 @@
 		A67E85E5F06FDA406D3A1B378BDF0C5C /* React-runtimescheduler */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-runtimescheduler"; path = "libReact-runtimescheduler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68E5A9B69A3BA0FD52CAF7A354EC93B /* React-RCTNetwork */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-RCTNetwork"; path = "libReact-RCTNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBB7F62B267CC7C9BBBAE41DE94743B /* Flipper-PeerTalk */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Flipper-PeerTalk"; path = "libFlipper-PeerTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B575BAA6950ED5CEECF995D15F95BB63 /* Pods-AwesomeProject */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-AwesomeProject"; path = "libPods-AwesomeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B575BAA6950ED5CEECF995D15F95BB63 /* Pods-MascotasFelicesProject */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-MascotasFelicesProject"; path = "libPods-MascotasFelicesProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7610E9FDE749C16C0B1CDAAF3B2DDC2 /* React-utils */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-utils"; path = "libReact-utils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CD4B9B578CE9FA38114B638C9CAA78 /* RNCMaskedView */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RNCMaskedView; path = libRNCMaskedView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD71E2539823621820F84384064C253A /* React-Core */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-Core"; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -10495,7 +10495,7 @@
 		E6A16705C69FC7DE11C2469A4A0F8358 /* React-RCTText */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-RCTText"; path = "libReact-RCTText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7178FECB829C9576A3723658B07F087 /* React-Codegen */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-Codegen"; path = "libReact-Codegen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93F701CA8EB196D77AE99E094D873E4 /* Flipper */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Flipper; path = libFlipper.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9E9891918DDFB5F51768F0F3EFEABAE /* Pods-AwesomeProject-AwesomeProjectTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-AwesomeProject-AwesomeProjectTests"; path = "libPods-AwesomeProject-AwesomeProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E9891918DDFB5F51768F0F3EFEABAE /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests"; path = "libPods-MascotasFelicesProject-MascotasFelicesProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDBF403E8E0B3885E65C2741B536BC5 /* React-RCTImage */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-RCTImage"; path = "libReact-RCTImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E7C88DFCD460A4B46B913ADEB8A641 /* React-jsiexecutor */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "React-jsiexecutor"; path = "libReact-jsiexecutor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BDA69E3BCB0166D49FB679ABADCA00 /* fmt */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = fmt; path = libfmt.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -10927,8 +10927,8 @@
 				F4BDA69E3BCB0166D49FB679ABADCA00 /* fmt */,
 				3CA7A9404CCDD6BA22C97F8348CE3209 /* glog */,
 				FB6FAD8F0183E86ACBFBD8A81BA7BF3A /* libevent */,
-				B575BAA6950ED5CEECF995D15F95BB63 /* Pods-AwesomeProject */,
-				E9E9891918DDFB5F51768F0F3EFEABAE /* Pods-AwesomeProject-AwesomeProjectTests */,
+				B575BAA6950ED5CEECF995D15F95BB63 /* Pods-MascotasFelicesProject */,
+				E9E9891918DDFB5F51768F0F3EFEABAE /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */,
 				1936453FF2A7E3A13063C4917C4D5598 /* RCT-Folly */,
 				F958876A082BF810B342435CE3FB5AF6 /* RCTTypeSafety */,
 				E7178FECB829C9576A3723658B07F087 /* React-Codegen */,
@@ -10986,8 +10986,8 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0001FCC0 /* Pods-AwesomeProject */,
-				46EB2E0001FDD0 /* Pods-AwesomeProject-AwesomeProjectTests */,
+				46EB2E0001FCC0 /* Pods-MascotasFelicesProject */,
+				46EB2E0001FDD0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -17780,34 +17780,34 @@
 			path = "../../ios/Pods/Target Support Files/react-native-safe-area-context";
 			sourceTree = "<group>";
 		};
-		46EB2E0001FCC0 /* Pods-AwesomeProject */ = {
+		46EB2E0001FCC0 /* Pods-MascotasFelicesProject */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0001FD20 /* Pods-AwesomeProject-acknowledgements.markdown */,
-				46EB2E0001FD10 /* Pods-AwesomeProject-acknowledgements.plist */,
-				46EB2E0001FD30 /* Pods-AwesomeProject-dummy.m */,
-				46EB2E0001FCF0 /* Pods-AwesomeProject-frameworks.sh */,
-				46EB2E0001FD00 /* Pods-AwesomeProject-resources.sh */,
-				46EB2E0001FCE0 /* Pods-AwesomeProject.debug.xcconfig */,
-				46EB2E0001FCD0 /* Pods-AwesomeProject.release.xcconfig */,
+				46EB2E0001FD20 /* Pods-MascotasFelicesProject-acknowledgements.markdown */,
+				46EB2E0001FD10 /* Pods-MascotasFelicesProject-acknowledgements.plist */,
+				46EB2E0001FD30 /* Pods-MascotasFelicesProject-dummy.m */,
+				46EB2E0001FCF0 /* Pods-MascotasFelicesProject-frameworks.sh */,
+				46EB2E0001FD00 /* Pods-MascotasFelicesProject-resources.sh */,
+				46EB2E0001FCE0 /* Pods-MascotasFelicesProject.debug.xcconfig */,
+				46EB2E0001FCD0 /* Pods-MascotasFelicesProject.release.xcconfig */,
 			);
-			name = "Pods-AwesomeProject";
-			path = "Target Support Files/Pods-AwesomeProject";
+			name = "Pods-MascotasFelicesProject";
+			path = "Target Support Files/Pods-MascotasFelicesProject";
 			sourceTree = "<group>";
 		};
-		46EB2E0001FDD0 /* Pods-AwesomeProject-AwesomeProjectTests */ = {
+		46EB2E0001FDD0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E0001FE30 /* Pods-AwesomeProject-AwesomeProjectTests-acknowledgements.markdown */,
-				46EB2E0001FE20 /* Pods-AwesomeProject-AwesomeProjectTests-acknowledgements.plist */,
-				46EB2E0001FE40 /* Pods-AwesomeProject-AwesomeProjectTests-dummy.m */,
-				46EB2E0001FE00 /* Pods-AwesomeProject-AwesomeProjectTests-frameworks.sh */,
-				46EB2E0001FE10 /* Pods-AwesomeProject-AwesomeProjectTests-resources.sh */,
-				46EB2E0001FDF0 /* Pods-AwesomeProject-AwesomeProjectTests.debug.xcconfig */,
-				46EB2E0001FDE0 /* Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig */,
+				46EB2E0001FE30 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-acknowledgements.markdown */,
+				46EB2E0001FE20 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-acknowledgements.plist */,
+				46EB2E0001FE40 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-dummy.m */,
+				46EB2E0001FE00 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-frameworks.sh */,
+				46EB2E0001FE10 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-resources.sh */,
+				46EB2E0001FDF0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests.debug.xcconfig */,
+				46EB2E0001FDE0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests.release.xcconfig */,
 			);
-			name = "Pods-AwesomeProject-AwesomeProjectTests";
-			path = "Target Support Files/Pods-AwesomeProject-AwesomeProjectTests";
+			name = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests";
+			path = "Target Support Files/Pods-MascotasFelicesProject-MascotasFelicesProjectTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -21217,9 +21217,9 @@
 			productReference = BD71E2539823621820F84384064C253A /* React-Core */;
 			productType = "com.apple.product-type.library.static";
 		};
-		7C6AA76E40034F313582E2FB501D00E5 /* Pods-AwesomeProject-AwesomeProjectTests */ = {
+		7C6AA76E40034F313582E2FB501D00E5 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E0001FD60 /* Build configuration list for PBXNativeTarget "Pods-AwesomeProject-AwesomeProjectTests" */;
+			buildConfigurationList = 46EB2E0001FD60 /* Build configuration list for PBXNativeTarget "Pods-MascotasFelicesProject-MascotasFelicesProjectTests" */;
 			buildPhases = (
 				46EB2E0001FDA0 /* Headers */,
 				46EB2E0001FDB0 /* Sources */,
@@ -21295,14 +21295,14 @@
 				46EB2E00020F20 /* PBXTargetDependency */,
 				46EB2E00020F40 /* PBXTargetDependency */,
 			);
-			name = "Pods-AwesomeProject-AwesomeProjectTests";
-			productName = "Pods-AwesomeProject-AwesomeProjectTests";
-			productReference = E9E9891918DDFB5F51768F0F3EFEABAE /* Pods-AwesomeProject-AwesomeProjectTests */;
+			name = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests";
+			productName = "Pods-MascotasFelicesProject-MascotasFelicesProjectTests";
+			productReference = E9E9891918DDFB5F51768F0F3EFEABAE /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */;
 			productType = "com.apple.product-type.library.static";
 		};
-		7E9C1CFB49B664B35C9611E98DEE60A4 /* Pods-AwesomeProject */ = {
+		7E9C1CFB49B664B35C9611E98DEE60A4 /* Pods-MascotasFelicesProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E0001FC50 /* Build configuration list for PBXNativeTarget "Pods-AwesomeProject" */;
+			buildConfigurationList = 46EB2E0001FC50 /* Build configuration list for PBXNativeTarget "Pods-MascotasFelicesProject" */;
 			buildPhases = (
 				46EB2E0001FC90 /* Headers */,
 				46EB2E0001FCA0 /* Sources */,
@@ -21378,9 +21378,9 @@
 				46EB2E000206E0 /* PBXTargetDependency */,
 				46EB2E00020700 /* PBXTargetDependency */,
 			);
-			name = "Pods-AwesomeProject";
-			productName = "Pods-AwesomeProject";
-			productReference = B575BAA6950ED5CEECF995D15F95BB63 /* Pods-AwesomeProject */;
+			name = "Pods-MascotasFelicesProject";
+			productName = "Pods-MascotasFelicesProject";
+			productReference = B575BAA6950ED5CEECF995D15F95BB63 /* Pods-MascotasFelicesProject */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8DED5282246ABFC24F4460D3066C84A0 /* React-RCTFabric */ = {
@@ -22039,8 +22039,8 @@
 				985FEA01F314F3C00F0C1E1181E6C4A5 /* hermes-engine */,
 				04A30E186743192DFB26B0FD7DB8F250 /* libevent */,
 				B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */,
-				7E9C1CFB49B664B35C9611E98DEE60A4 /* Pods-AwesomeProject */,
-				7C6AA76E40034F313582E2FB501D00E5 /* Pods-AwesomeProject-AwesomeProjectTests */,
+				7E9C1CFB49B664B35C9611E98DEE60A4 /* Pods-MascotasFelicesProject */,
+				7C6AA76E40034F313582E2FB501D00E5 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests */,
 				EC55D52694092A9D0E6A78EB01207EB5 /* RCT-Folly */,
 				E7E7CE52C8C68B17224FF8C262D80ABF /* RCTRequired */,
 				D20469A9A1E5CFB26045EAEBE3F88E5E /* RCTTypeSafety */,
@@ -23829,7 +23829,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0001FD40 /* Pods-AwesomeProject-dummy.m in Sources */,
+				46EB2E0001FD40 /* Pods-MascotasFelicesProject-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -23837,7 +23837,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E0001FE50 /* Pods-AwesomeProject-AwesomeProjectTests-dummy.m in Sources */,
+				46EB2E0001FE50 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29671,7 +29671,7 @@
 		};
 		46EB2E0001FC60 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E0001FCD0 /* Pods-AwesomeProject.release.xcconfig */;
+			baseConfigurationReference = 46EB2E0001FCD0 /* Pods-MascotasFelicesProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -29693,7 +29693,7 @@
 		};
 		46EB2E0001FC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E0001FCE0 /* Pods-AwesomeProject.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E0001FCE0 /* Pods-MascotasFelicesProject.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -29714,7 +29714,7 @@
 		};
 		46EB2E0001FD70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E0001FDE0 /* Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig */;
+			baseConfigurationReference = 46EB2E0001FDE0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -29736,7 +29736,7 @@
 		};
 		46EB2E0001FD80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E0001FDF0 /* Pods-AwesomeProject-AwesomeProjectTests.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E0001FDF0 /* Pods-MascotasFelicesProject-MascotasFelicesProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -30370,7 +30370,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E0001FC50 /* Build configuration list for PBXNativeTarget "Pods-AwesomeProject" */ = {
+		46EB2E0001FC50 /* Build configuration list for PBXNativeTarget "Pods-MascotasFelicesProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46EB2E0001FC70 /* Debug */,
@@ -30379,7 +30379,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E0001FD60 /* Build configuration list for PBXNativeTarget "Pods-AwesomeProject-AwesomeProjectTests" */ = {
+		46EB2E0001FD60 /* Build configuration list for PBXNativeTarget "Pods-MascotasFelicesProject-MascotasFelicesProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46EB2E0001FD80 /* Debug */,

@@ -290,8 +290,8 @@ An explicit namespace must be managed by one single loader. Loaders that reopen 
 Say some directories in a project exist for organizational purposes only, and you prefer not to have them as namespaces. For example, the `actions` subdirectory in the next example is not meant to represent a namespace, it is there only to group all actions related to bookings:
 
 ```
-booking.rb                -> Booking
-booking/actions/create.rb -> Booking::Create
+booking.rb                -> Duenoing
+booking/actions/create.rb -> Duenoing::Create
 ```
 
 To make it work that way, configure Zeitwerk to collapse said directory:

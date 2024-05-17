@@ -13,15 +13,15 @@ import {ROUTES} from '../helpers/routes';
 const HomeScreen = ({navigation}) => {
   return (
     <ImageBackground
-      source={{uri: 'https://source.unsplash.com/1600x900/?books'}} // Replace URL with your image URL
+      source={{uri: 'https://source.unsplash.com/1600x900/?duenos'}} // Replace URL with your image URL
       style={styles.container}
       blurRadius={1}>
       <View style={styles.content}>
         <Text style={styles.title}>Bienvenid@ a la app de Mascotas Felices</Text>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate(ROUTES.BOOKS.STACK.BOOKS_LIST)}>
-          <Text style={styles.buttonText}>Lista de libros</Text>
+          onPress={() => navigation.navigate(ROUTES.DUENOS.STACK.DUENOS_LIST)}>
+          <Text style={styles.buttonText}>Lista de Duenos</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>

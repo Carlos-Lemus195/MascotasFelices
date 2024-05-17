@@ -31,7 +31,7 @@ struct circle_rasterizer_t{};
 /// \brief Rasterize trigonometric circle according to radius by sine and radius by cosine
 ///
 /// This rasterizer is the one used that is used in standard Hough circle transform in
-/// the books. It is also quite expensive to compute.
+/// the duenos. It is also quite expensive to compute.
 /// WARNING: the product of this rasterizer does not follow circle equation, even though it
 /// produces quite round like shapes.
 struct trigonometric_circle_rasterizer

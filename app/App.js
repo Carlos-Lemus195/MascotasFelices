@@ -1,14 +1,29 @@
 // App.js
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import HomeScreen from './src/screens/HomeScreen';
-import BooksList from './src/screens/books/BooksList';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
+import { Button, Text, Card } from '@rneui/themed';
 import {ROUTES} from './src/helpers/routes';
-import AddBookForm from './src/screens/books/AddBook';
+import HomeScreen from './src/screens/HomeScreen';
 import WebSocket from './src/screens/labs/Websocket';
+//Seccion Duenos
+import DuenosList from './src/screens/duenos/DuenosList';
+import DuenoDetail from './src/screens/duenos/DuenoDetail';
+import AddDuenoForm from './src/screens/duenos/AddDueno';
+//Seccion Mascotas
+import MascotasList from './src/screens/mascotas/MascotasList';
+import MascotaDetail from './src/screens/mascotas/MascotaDetail';
+import AddMascotaForm from './src/screens/mascotas/AddMascota';
+//Seccion citas
+import CitasList from './src/screens/citas/CitasList';
+import CitaDetail from './src/screens/citas/CitaDetail';
+import AddCitaForm from './src/screens/citas/AddCita';
+//Seccion desoaracitaciones
+import DesparacitacionesList from './src/screens/desparacitaciones/DesparacitacionesList';
+import DesparacitacionDetail from './src/screens/desparacitaciones/DesparacitacionDetail';
+import AddDesparacitacionForm from './src/screens/desparacitaciones/AddDesparacitacion';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -27,19 +42,89 @@ function HomeStack() {
   );
 }
 
-function BooksStack() {
+function DuenosStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={ROUTES.BOOKS.STACK.BOOKS_LIST}
-        component={BooksList}
+        name={ROUTES.DUENOS.STACK.DUENOS_LIST}
+        component={DuenosList}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
-        name={ROUTES.BOOKS.STACK.NEW_BOOK}
-        component={AddBookForm}
+        name={ROUTES.DUENOS.STACK.DUENO_DETAILS}
+        component={DuenoDetail}
+      />
+      <Stack.Screen
+        name={ROUTES.DUENOS.STACK.NEW_DUENO}
+        component={AddDuenoForm}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function MascotasStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={ROUTES.MASCOTAS.STACK.MASCOTAS_LIST}
+        component={MascotasList}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={ROUTES.MASCOTAS.STACK.MASCOTA_DETAILS}
+        component={MascotaDetail}
+      />
+      <Stack.Screen
+        name={ROUTES.MASCOTAS.STACK.NEW_MASCOTA}
+        component={AddMascotaForm}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function CitasStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={ROUTES.CITAS.STACK.CITAS_LIST}
+        component={CitasList}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={ROUTES.CITAS.STACK.CITA_DETAILS}
+        component={CitaDetail}
+      />
+      <Stack.Screen
+        name={ROUTES.CITAS.STACK.NEW_CITA}
+        component={AddCitaForm}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function DesparacitacionesStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={ROUTES.DESPARACITACIONES.STACK.DESPARACITACIONES_LIST}
+        component={DesparacitacionesList}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={ROUTES.DESPARACITACIONES.STACK.DESPARACITACION_DETAILS}
+        component={DesparacitacionDetail}
+      />
+      <Stack.Screen
+        name={ROUTES.DESPARACITACIONES.STACK.NEW_DESPARACITACION}
+        component={AddDesparacitacionForm}
       />
     </Stack.Navigator>
   );
@@ -63,11 +148,11 @@ function getHeaderTitle(route) {
   const routeName = getFocusedRouteNameFromRoute(route) ?? ROUTES.HOME.HOME;
   switch (routeName) {
     case undefined:
-      return 'Libreria Da Vinci';
-    case ROUTES.BOOKS.STACK.BOOKS_LIST:
-      return 'Lista de libros';
-    case ROUTES.BOOKS.STACK.NEW_BOOK:
-      return 'Agregar libro';
+      return 'Veterinaria Mascotas Felices';
+    case ROUTES.DUENOS.STACK.DUENOS_LIST:
+      return 'Lista de Duenos Registrados';
+    case ROUTES.DUENOS.STACK.NEW_DUENO:
+      return 'Agregar dueno';
     case ROUTES.LABS.INDEX:
       return 'WebSocket';
     default:
@@ -77,10 +162,13 @@ function getHeaderTitle(route) {
 
 function shouldRenderDrawerParent(route) {
   const routeName = getFocusedRouteNameFromRoute(route);
-  console.log(routeName);
+  //console.log(routeName);
   switch (routeName) {
     case undefined:
-    case ROUTES.BOOKS.STACK.BOOKS_LIST:
+    case ROUTES.DUENOS.STACK.DUENOS_LIST:
+    case ROUTES.MASCOTAS.STACK.MASCOTAS_LIST:
+    case ROUTES.CITAS.STACK.CITAS_LIST:
+    case ROUTES.DESPARACITACIONES.STACK.DESPARACITACIONES_LIST:
     case ROUTES.LABS.INDEX:
       return true;
     default:
@@ -88,10 +176,22 @@ function shouldRenderDrawerParent(route) {
   }
 }
 
+function CustomDrawerContent(props) {
+  return (
+    <DrawerContentScrollView {...props}>
+      <DrawerItemList {...props} />
+      <Text>Carlos Lemus</Text>
+      <Text>Technologies used in this project:</Text>
+      <Text>React Native, Axios, JavaScript.</Text>
+      <Text>GitHub: https://github.com/Carlos-Lemus195/MascotasFelices</Text>
+    </DrawerContentScrollView>
+  );
+}
+
 function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName={ROUTES.HOME.INDEX}>
+      <Drawer.Navigator initialRouteName={ROUTES.HOME.INDEX} drawerContent={props => <CustomDrawerContent {...props} />}>
         <Drawer.Screen
           name={ROUTES.HOME.INDEX}
           component={HomeStack}
@@ -102,11 +202,38 @@ function App() {
           })}
         />
         <Drawer.Screen
-          name={ROUTES.BOOKS.INDEX}
-          component={BooksStack}
+          name={ROUTES.DUENOS.INDEX}
+          component={DuenosStack}
           options={({route}) => ({
-            headerTitle: 'Libros',
-            drawerLabel: 'Libros',
+            headerTitle: 'Duenos',
+            drawerLabel: 'Duenos',
+            headerShown: shouldRenderDrawerParent(route),
+          })}
+        />
+        <Drawer.Screen
+          name={ROUTES.MASCOTAS.INDEX}
+          component={MascotasStack}
+          options={({route}) => ({
+            headerTitle: 'Mascotas',
+            drawerLabel: 'Mascotas',
+            headerShown: shouldRenderDrawerParent(route),
+          })}
+        />
+        <Drawer.Screen
+          name={ROUTES.CITAS.INDEX}
+          component={CitasStack}
+          options={({route}) => ({
+            headerTitle: 'Citas',
+            drawerLabel: 'Citas',
+            headerShown: shouldRenderDrawerParent(route),
+          })}
+        />
+        <Drawer.Screen
+          name={ROUTES.DESPARACITACIONES.INDEX}
+          component={DesparacitacionesStack}
+          options={({route}) => ({
+            headerTitle: 'Desparacitaciones',
+            drawerLabel: 'Desparacitaciones',
             headerShown: shouldRenderDrawerParent(route),
           })}
         />

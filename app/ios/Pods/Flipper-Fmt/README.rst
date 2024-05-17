@@ -311,7 +311,7 @@ Projects using this library
 * `Aseprite <https://github.com/aseprite/aseprite>`_:
   animated sprite editor & pixel art tool 
 
-* `AvioBook <https://www.aviobook.aero/en>`_: a comprehensive aircraft
+* `AvioDueno <https://www.aviobook.aero/en>`_: a comprehensive aircraft
   operations suite
   
 * `Blizzard Battle.net <https://battle.net/>`_: an online gaming platform

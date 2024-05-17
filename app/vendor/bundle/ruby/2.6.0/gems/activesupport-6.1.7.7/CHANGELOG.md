@@ -519,16 +519,16 @@
     and act accordingly.
 
     ```ruby
-      class Book < ApplicationRecord
+      class Dueno < ApplicationRecord
         before_save { throw(:abort) }
         before_create { throw(:abort) }
 
         def halted_callback_hook(filter, callback_name)
-          Rails.logger.info("Book couldn't be #{callback_name}d")
+          Rails.logger.info("Dueno couldn't be #{callback_name}d")
         end
 
-        Book.create # => "Book couldn't be created"
-        book.save # => "Book couldn't be saved"
+        Dueno.create # => "Dueno couldn't be created"
+        book.save # => "Dueno couldn't be saved"
       end
     ```
 
