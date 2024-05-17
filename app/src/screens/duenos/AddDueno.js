@@ -8,10 +8,10 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import BookFactory from '../../factories/BookFactory';
-import {addNewBook} from '../../services/apiService';
+import DuenoFactory from '../../factories/DuenoFactory';
+import {addNewDueno} from '../../services/apiService';
 
-const AddBookForm = ({onAddBook}) => {
+const AddDuenoForm = ({onAddDueno}) => {
   const [formState, setFormState] = useState({
     title: '',
     author: '',
@@ -39,8 +39,8 @@ const AddBookForm = ({onAddBook}) => {
       return;
     }
 
-    const newBook = BookFactory.createBook(formState);
-    await handleAddBook(newBook);
+    const newDueno = DuenoFactory.createDueno(formState);
+    await handleAddDueno(newDueno);
     setFormState({
       title: '',
       author: '',
@@ -49,10 +49,10 @@ const AddBookForm = ({onAddBook}) => {
     });
   };
 
-  const handleAddBook = async newBook => {
-    const response = await addNewBook(newBook);
+  const handleAddDueno = async newDueno => {
+    const response = await addNewDueno(newDueno);
     console.log('Response:', response);
-    Alert.alert('Book added successfully');
+    Alert.alert('Dueno added successfully');
   };
 
   const validateTitle = title => {
@@ -111,7 +111,7 @@ const AddBookForm = ({onAddBook}) => {
           name="status"
         />
       </View>
-      <Button title="Add Book" onPress={handleSubmit} />
+      <Button title="Add Dueno" onPress={handleSubmit} />
     </View>
   );
 };
@@ -146,4 +146,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddBookForm;
+export default AddDuenoForm;

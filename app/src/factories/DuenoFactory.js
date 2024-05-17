@@ -1,5 +1,5 @@
-// BookFactory.js
-class Book {
+// DuenoFactory.js
+class Dueno {
   constructor(author, book_pk, price, status, title) {
     this.author = author;
     this.book_pk = book_pk;
@@ -15,9 +15,9 @@ class Book {
   }
 }
 
-class BookFactory {
-  static createBook(bookData) {
-    return new Book(
+class DuenoFactory {
+  static createDueno(bookData) {
+    return new Dueno(
       bookData.author,
       bookData.book_pk,
       parseFloat(bookData.price),
@@ -27,4 +27,4 @@ class BookFactory {
   }
 }
 
-export default BookFactory;
+export default DuenoFactory;

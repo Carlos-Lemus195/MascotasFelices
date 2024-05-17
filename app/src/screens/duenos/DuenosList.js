@@ -1,4 +1,4 @@
-// BooksList.js
+// DuenosList.js
 
 import React, {useEffect, useState} from 'react';
 import {
@@ -9,26 +9,26 @@ import {
   TouchableOpacity,
   Button,
 } from 'react-native';
-import {getBooks} from '../../services/apiService';
-import BookFactory from '../../factories/BookFactory';
+import {getDuenos} from '../../services/apiService';
+import DuenoFactory from '../../factories/DuenoFactory';
 import {useRoute} from '@react-navigation/native';
 import {ROUTES} from '../../helpers/routes';
 
-const BooksList = ({navigation}) => {
-  const [books, setBooks] = useState([]);
+const DuenosList = ({navigation}) => {
+  const [duenos, setDuenos] = useState([]);
   const [error, setError] = useState(null);
   const route = useRoute();
 
   useEffect(() => {
-    const retrieveBooks = async () => {
-      const response = await getBooks();
-      const booksData = response.data.map(data => BookFactory.createBook(data));
-      setBooks(booksData);
+    const retrieveDuenos = async () => {
+      const response = await getDuenos();
+      const duenosData = response.data.map(data => DuenoFactory.createDueno(data));
+      setDuenos(duenosData);
     };
-    retrieveBooks();
+    retrieveDuenos();
   }, []);
 
-  const renderBookItem = ({item}) => (
+  const renderDuenoItem = ({item}) => (
     <View style={styles.itemContainer}>
       <Text>Title: {item.title}</Text>
       <Text>Author: {item.author}</Text>
@@ -44,14 +44,14 @@ const BooksList = ({navigation}) => {
       <TouchableOpacity
         style={styles.addButton}
         onPress={() => navigation.navigate(ROUTES.BOOKS.STACK.NEW_BOOK)}>
-        <Text style={styles.addButtonLabel}>Add Book</Text>
+        <Text style={styles.addButtonLabel}>Add Dueno</Text>
       </TouchableOpacity>
       {error ? (
         <Text>Error: {error}</Text>
       ) : (
         <FlatList
-          data={books}
-          renderItem={renderBookItem}
+          data={duenos}
+          renderItem={renderDuenoItem}
           keyExtractor={item => item.book_pk.toString()}
         />
       )}
@@ -82,4 +82,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BooksList;
+export default DuenosList;
